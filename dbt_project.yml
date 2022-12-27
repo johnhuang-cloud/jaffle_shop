@@ -20,6 +20,9 @@ clean-targets:
 require-dbt-version: [">=1.0.0", "<2.0.0"]
 
 models:
+  dbt_artifacts:
+    +database: JOHNTEST # optional, default is your target database
+    +schema: DBT_JHUANG # optional, default is your target schema
   jaffle_shop:
       materialized: table
       staging:
