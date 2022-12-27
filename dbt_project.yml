@@ -27,3 +27,5 @@ models:
       materialized: table
       staging:
         materialized: view
+
+on-run-end: "{{ dbt_artifacts.upload_results(results) }}"
